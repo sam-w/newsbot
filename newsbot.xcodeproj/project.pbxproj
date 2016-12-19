@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6C6C70F1E07670B00F380A6 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C70C1E07666800F380A6 /* Routes.swift */; };
+		C6C6C7121E077CD100F380A6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C7101E077CBA00F380A6 /* Database.swift */; };
 		OBJ_1000 /* e_des3.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_248 /* e_des3.c */; };
 		OBJ_1001 /* e_gmp.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_249 /* e_gmp.c */; };
 		OBJ_1002 /* e_gmp_err.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_250 /* e_gmp_err.c */; };
@@ -925,6 +926,7 @@
 
 /* Begin PBXFileReference section */
 		C6C6C70C1E07666800F380A6 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		C6C6C7101E077CBA00F380A6 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
 		OBJ_100 /* bn_mul.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_mul.c; sourceTree = "<group>"; };
 		OBJ_101 /* bn_nist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_nist.c; sourceTree = "<group>"; };
@@ -2556,6 +2558,7 @@
 				OBJ_737 /* Arguments.swift */,
 				C6C6C70C1E07666800F380A6 /* Routes.swift */,
 				OBJ_739 /* main.swift */,
+				C6C6C7101E077CBA00F380A6 /* Database.swift */,
 			);
 			name = newsbot;
 			path = Sources;
@@ -2878,6 +2881,7 @@
 				OBJ_1548 /* Arguments.swift in Sources */,
 				C6C6C70F1E07670B00F380A6 /* Routes.swift in Sources */,
 				OBJ_1549 /* ResponseExtensions.swift in Sources */,
+				C6C6C7121E077CD100F380A6 /* Database.swift in Sources */,
 				OBJ_1550 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

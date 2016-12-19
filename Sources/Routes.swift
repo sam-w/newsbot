@@ -16,13 +16,24 @@ extension Newsbot {
     
     static var routes: Routes {
         var routes = Routes()
-        routes.add(method: .get, uri: "/announce") { request, response in
+        routes.add(method: .post, uri: "/announce") { request, response in
             guard let clientToken = request.param(name: "token"), clientToken == token else {
                 response.complete(status: .forbidden)
                 return
             }
-            response.setHeader(.contentType, value: "text/html")
-            response.appendBody(string: "<html><title>Hello, world!</title><body>Hello, world!</body></html>")
+            
+            guard
+                let text = request.param(name: "text"), !text.isEmpty,
+                let channel = request.param(name: "channel_name"), !channel.isEmpty,
+                let user = request.param(name: "user_name"), !user.isEmpty
+                else
+            {
+                response.complete(status: .badRequest)
+                return
+            }
+            
+            response.setHeader(.contentType, value: "text/plain")
+            response.appendBody(string: "Reply!")
             response.complete(status: .ok)
         }
         return routes
