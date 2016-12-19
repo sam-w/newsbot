@@ -68,9 +68,9 @@ fileprivate extension Database {
     
     private static let instance = Instance()
     
-    private static let dbhost = "newbotinstance.cutupejdufse.us-west-2.rds.amazonaws.com"
-    private static let dbuser = "newsbotmaster"//"newsbotuser"
-    private static let dbpassword = "3ColoursBlue"//"H<xx&S~%uK!\\~X*"
+    private static let dbhost = "s-newsbot-rds.clhd2uxuvo0f.ap-southeast-2.rds.amazonaws.com"
+    private static let dbuser = "dom_dbuser"
+    private static let dbpassword = "Ksm8lkpqYWsx"
     
     static func execute(retrieval: RetrieveTask) -> RetrieveResult {
         guard instance.connect(host: dbhost, user: dbuser, password: dbpassword, db: dbname, port: 3306) else {

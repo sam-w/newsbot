@@ -17,6 +17,11 @@ extension Newsbot {
     static var routes: Routes {
         var routes = Routes()
         
+        routes.add(method: .get, uri: "/test") { request, response in
+            response.appendBody(string: "Success")
+            response.complete(status: .ok)
+        }
+        
         routes.add(method: .post, uri: "/announce-add") { request, response in
             guard let clientToken = request.param(name: "token"), clientToken == token else {
                 response.complete(status: .forbidden)
