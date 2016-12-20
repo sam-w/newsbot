@@ -15,15 +15,28 @@ enum Command {
 }
 
 extension Newsbot {
+    
+    typealias RouteResult = Result<SlackResponse, String>
 
-    static func list() -> String {
-        let results = Database.list()
-        return results.debugDescription
+    static func list() -> RouteResult {
+        return Database.list().map {
+            SlackResponse(inChannel: false,
+                          text: "All news",
+                          attachedText: $0.debugDescription)
+        }.mapError {
+            $0.debugDescription
+        }
     }
     
-    static func add(text: String, modifiers: [Announcement.Modifier], user: String, channel: String) {
+    static func add(text: String, modifiers: [Announcement.Modifier], user: String, channel: String) -> RouteResult {
         let announcement = Announcement(user: user, channel: channel, text: text, modifiers: modifiers, category: nil)
-        Database.insert(announcement: announcement)
+        return Database.insert(announcement: announcement).map {
+            SlackResponse(inChannel: true,
+                          text: "\(user) added an announcement:",
+                          attachedText: text)
+        }.mapError {
+            $0.debugDescription
+        }
     }
 }
 

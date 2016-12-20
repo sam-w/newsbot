@@ -8,6 +8,7 @@
 
 import Foundation
 import PerfectHTTP
+import Result
 
 private let token = "liuSVUh04E4w1tT4g8FarT3J"
 
@@ -35,12 +36,9 @@ extension Newsbot {
             let interpretResult = request.param(name: "text").map { Command.from(string: $0) } ?? .success(.list)
             switch interpretResult {
             case .success(.list):
-                let list = Newsbot.list()
-                response.appendBody(string: list)
-                response.complete(status: .ok)
+                response.complete(result: Newsbot.list())
             case let .success(.add(text, modifiers)):
-                Newsbot.add(text: text, modifiers: modifiers, user: user, channel: channel)
-                response.complete(status: .ok)
+                response.complete(result: Newsbot.add(text: text, modifiers: modifiers, user: user, channel: channel))
             case let .failure(error):
                 response.appendBody(string: error)
                 response.complete(status: .badRequest)
@@ -55,5 +53,19 @@ extension Newsbot {
         }
         
         return routes
+    }
+}
+
+fileprivate extension HTTPResponse {
+    
+    func complete(result: Newsbot.RouteResult) {
+        result.analysis(ifSuccess: {
+            self.setHeader(.contentType, value: "application/json")
+            try! self.setBody(json: $0.dictionaryRepresentation)
+            self.complete(status: .ok)
+        }, ifFailure: {
+            self.appendBody(string: $0)
+            self.complete(status: .internalServerError)
+        })
     }
 }

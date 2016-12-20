@@ -10,6 +10,7 @@
 		C6C6C7481E07A1BC00F380A6 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C7461E07A19300F380A6 /* Announcement.swift */; };
 		C6C6C74C1E07A89400F380A6 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C7491E07A81800F380A6 /* OrderedSet.swift */; };
 		C6C6C74E1E08B40A00F380A6 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C74D1E08B40A00F380A6 /* Commands.swift */; };
+		C6CF381F1E08CC22008DFD60 /* ResponseFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF381E1E08CC22008DFD60 /* ResponseFormatting.swift */; };
 		OBJ_1000 /* e_camellia.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_239 /* e_camellia.c */; };
 		OBJ_1001 /* e_capi.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_240 /* e_capi.c */; };
 		OBJ_1002 /* e_capi_err.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_241 /* e_capi_err.c */; };
@@ -950,6 +951,7 @@
 		C6C6C7461E07A19300F380A6 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		C6C6C7491E07A81800F380A6 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
 		C6C6C74D1E08B40A00F380A6 /* Commands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		C6CF381E1E08CC22008DFD60 /* ResponseFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseFormatting.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
 		OBJ_100 /* bn_mul.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_mul.c; sourceTree = "<group>"; };
 		OBJ_101 /* bn_nist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_nist.c; sourceTree = "<group>"; };
@@ -2480,7 +2482,7 @@
 			path = "Packages/COpenSSL-2.0.2/COpenSSL";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -2488,7 +2490,6 @@
 				OBJ_747 /* Tests */,
 				OBJ_748 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -2620,6 +2621,7 @@
 				OBJ_745 /* ResponseExtensions.swift */,
 				OBJ_746 /* Routes.swift */,
 				C6C6C74D1E08B40A00F380A6 /* Commands.swift */,
+				C6CF381E1E08CC22008DFD60 /* ResponseFormatting.swift */,
 				C6C6C7491E07A81800F380A6 /* OrderedSet.swift */,
 			);
 			name = newsbot;
@@ -2874,7 +2876,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_748 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -2997,6 +2999,7 @@
 			files = (
 				C6C6C7481E07A1BC00F380A6 /* Announcement.swift in Sources */,
 				C6C6C74C1E07A89400F380A6 /* OrderedSet.swift in Sources */,
+				C6CF381F1E08CC22008DFD60 /* ResponseFormatting.swift in Sources */,
 				OBJ_1572 /* Arguments.swift in Sources */,
 				C6C6C74E1E08B40A00F380A6 /* Commands.swift in Sources */,
 				OBJ_1573 /* Database.swift in Sources */,
