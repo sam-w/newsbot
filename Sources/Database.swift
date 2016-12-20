@@ -51,8 +51,10 @@ struct Database {
                 return .failure(instance.error)
             }
             
+            let results = instance.storeResults()
+            
             var rows = [[String?]]()
-            while let row = instance.storeResults()?.next() {
+            while let row = results?.next() {
                 rows.append(row)
             }
             

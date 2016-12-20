@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C6C6C7481E07A1BC00F380A6 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C7461E07A19300F380A6 /* Announcement.swift */; };
 		C6C6C74C1E07A89400F380A6 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C7491E07A81800F380A6 /* OrderedSet.swift */; };
+		C6C6C74E1E08B40A00F380A6 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C6C74D1E08B40A00F380A6 /* Commands.swift */; };
 		OBJ_1000 /* e_camellia.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_239 /* e_camellia.c */; };
 		OBJ_1001 /* e_capi.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_240 /* e_capi.c */; };
 		OBJ_1002 /* e_capi_err.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_241 /* e_capi_err.c */; };
@@ -948,6 +949,7 @@
 /* Begin PBXFileReference section */
 		C6C6C7461E07A19300F380A6 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		C6C6C7491E07A81800F380A6 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
+		C6C6C74D1E08B40A00F380A6 /* Commands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
 		OBJ_100 /* bn_mul.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_mul.c; sourceTree = "<group>"; };
 		OBJ_101 /* bn_nist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_nist.c; sourceTree = "<group>"; };
@@ -2617,6 +2619,7 @@
 				OBJ_744 /* main.swift */,
 				OBJ_745 /* ResponseExtensions.swift */,
 				OBJ_746 /* Routes.swift */,
+				C6C6C74D1E08B40A00F380A6 /* Commands.swift */,
 				C6C6C7491E07A81800F380A6 /* OrderedSet.swift */,
 			);
 			name = newsbot;
@@ -2995,6 +2998,7 @@
 				C6C6C7481E07A1BC00F380A6 /* Announcement.swift in Sources */,
 				C6C6C74C1E07A89400F380A6 /* OrderedSet.swift in Sources */,
 				OBJ_1572 /* Arguments.swift in Sources */,
+				C6C6C74E1E08B40A00F380A6 /* Commands.swift in Sources */,
 				OBJ_1573 /* Database.swift in Sources */,
 				OBJ_1574 /* main.swift in Sources */,
 				OBJ_1575 /* ResponseExtensions.swift in Sources */,
