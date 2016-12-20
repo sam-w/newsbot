@@ -58,7 +58,7 @@ struct Database {
                 rows.append(row)
             }
             
-            let result = rows.flatMap { Announcement(databaseRow: $0) }
+            let result = rows.suffix(5).flatMap { Announcement(databaseRow: $0) }
             return .success(result)
         }
     }

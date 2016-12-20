@@ -20,9 +20,11 @@ extension Newsbot {
 
     static func list() -> RouteResult {
         return Database.list().map {
-            SlackResponse(inChannel: false,
-                          text: "All news",
-                          attachedText: $0.debugDescription)
+            let attachments = $0.map {
+                SlackResponse.Attachment(user: $0.user, text: $0.text)
+            }
+            return SlackResponse(inChannel: false,
+                                 attachments: attachments)
         }.mapError {
             $0.debugDescription
         }
@@ -31,9 +33,9 @@ extension Newsbot {
     static func add(text: String, modifiers: [Announcement.Modifier], user: String, channel: String) -> RouteResult {
         let announcement = Announcement(user: user, channel: channel, text: text, modifiers: modifiers, category: nil)
         return Database.insert(announcement: announcement).map {
-            SlackResponse(inChannel: true,
-                          text: "\(user) added an announcement:",
-                          attachedText: text)
+            let attachment = SlackResponse.Attachment(user: user, text: text)
+            return SlackResponse(inChannel: true,
+                                 attachments: [attachment])
         }.mapError {
             $0.debugDescription
         }
